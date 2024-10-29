@@ -4,6 +4,7 @@
     --accentColor: #DDA0DD;     /* Vibrant Lavender */
     --secondColor: #8D99AE;     /* Muted Steel Blue */
     --buttonColor: #FF6F61;     /* Coral Pink */
+    --lighterAccentColor: #efdbef;
 }
 
 
@@ -24,9 +25,10 @@ h1 {
     font-size: 4vw;
     font-weight: 700;
     line-height: 1.2;
+    padding-top: 4rem;
 }
 
-h1::before {
+.home-content h1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,14 +40,18 @@ h1::before {
     background-color: var(--fond);
 }
 
+h2 {
+    font-size: 2.5rem;
+}
+
 h3 {
     position: relative;
-    font-size: 1.8vw;
+    font-size: 1.65rem;
     font-weight: 700;
     color: var(--accentColor);
 }
 
-h3::before {
+.home-content h3::before {
     content: '';
     position: absolute;
     top: 0;
@@ -65,7 +71,7 @@ h4 {
 
 p, ul {
     position: relative;
-    font-size: 1.1vw;
+    font-size: 1.0rem;
     margin: 2vw 0 2vw;
 }
 
@@ -73,7 +79,7 @@ ul {
     padding-left: 30px;
 }
 
-p::before, li::before {
+.home-content p::before, .home-content li::before {
     content: '';
     position: absolute;
     top: 0;
@@ -143,7 +149,7 @@ p::before, li::before {
     height: 100vh;
     display: flex;
     padding: 0 10%;
-    padding-top: 15vw; 
+    padding-top: 9rem; 
 }
 
 .presentation, .snapshot {
@@ -281,6 +287,101 @@ p::before, li::before {
 
 .btn-box a:nth-child(2):hover {
     color: var(--fond);
+}
+
+.engineering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding-bottom: 4rem;
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursus {
+    border-left: .15rem solid var(--accentColor);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.cursus .box{
+    padding: 1rem;
+    border: 0.15rem solid var(--accentColor);
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.cursus .box::before {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    left: -2.15rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accentColor);
+    border-radius: 50%;
+}
+
+.cursus .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--lighterAccentColor);
+    z-index: -1;
+    transition: .5s;
+}
+
+.cursus .box:hover::after {
+    width: 100%;
+}
+
+.cursus .box .semester {
+    display: flex;
+    flex-wrap: wrap;
+    gap:2.5rem;
+}
+
+.cursus .box .semester-content{
+    position: relative;
+    flex: 1;
+}
+
+.cursus .box .year{
+    font-size: 1rem;
+    color: var(--accentColor);
+    padding-bottom: .35rem;
+}
+
+.cursus .box .year i {
+    padding-right: .35rem
+}
+
+.cursus .box h3{
+    font-size: 1.5rem;
+    color: var(--textColor);
+    padding: 0;
+    margin: 0;
+}
+
+.cursus .box ul,.cursus .box p{
+    font-size: 0.9rem;
+    padding-top: .3rem;
+    margin:0
+}
+
+.intro p {
+    max-width: 60%;
 }
 
 @keyframes showRight {
