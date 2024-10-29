@@ -177,16 +177,16 @@ p::before, li::before {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 3vw;
+    height: 3vw;
     background: transparent;
     border: 2px solid var(--buttonColor);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-decoration: none;
     color: var(--buttonColor);
     overflow: hidden;
-    margin-right: 1vw;
+    margin-right: 2vw;
 }
 
 .social-media a::before {
@@ -289,16 +289,38 @@ p::before, li::before {
     }
 }
 
-
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
     .presentation, .snapshot {
-        max-width: 100%; /* Adjust max-width */
-        width: 100%; /* Ensures full width */
+        max-width: 100%; 
+        width: 100%; 
     }
-    .navbar {
-        align-items: center; 
+    p {
+        font-size: 1.5vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    h3 {
+        font-size: 2.5vw;
+    }
+    .header {
+        /* align-items: center;  */
+        height: 15vw;
     }
     .navbar a {
-        font-size: 2vw; /* Responsive font size */
+        font-size: 1.5vw; 
+        margin-left: 3vw;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+        color: var(--buttonColor) ;
+        font-size: 1.55vw ;
+    }
+    .logo{
+        font-size: 2.6vw;
+    }
+    .home {
+        padding-top: 25vw; 
+        margin-bottom: 5vw;
     }
 }
