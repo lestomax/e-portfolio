@@ -4,7 +4,8 @@
     --accentColor: #DDA0DD;     /* Vibrant Lavender */
     --secondColor: #8D99AE;     /* Muted Steel Blue */
     --buttonColor: #FF6F61;     /* Coral Pink */
-    --lighterAccentColor: #efdbef;
+    --lighterAccentColor: #f4e8f4;
+    --darkerAccentColor: #bd44bd;
 }
 
 
@@ -64,9 +65,10 @@ h3 {
 }
 
 h4 {
-    color: var(--secondColor);
-    font-size: 1.1vw;
+    color: var(--accentColor);
+    font-size: 1.7rem;
     position: relative;
+    margin: 1.5rem 0 0.5rem 2rem;
 }
 
 p, ul {
@@ -295,7 +297,6 @@ ul {
     align-items: center;
     min-height: auto;
     padding-bottom: 4rem;
-
 }
 
 .intro {
@@ -303,6 +304,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .cursus {
@@ -311,7 +313,7 @@ ul {
     padding-left: 1.5rem;
 }
 
-.cursus .box{
+.box{
     padding: 1rem;
     border: 0.15rem solid var(--accentColor);
     border-radius: .5rem;
@@ -329,8 +331,7 @@ ul {
     background-color: var(--accentColor);
     border-radius: 50%;
 }
-
-.cursus .box::after {
+.box::after {
     content: "";
     position: absolute;
     top: 0;
@@ -342,46 +343,84 @@ ul {
     transition: .5s;
 }
 
-.cursus .box:hover::after {
+.box:hover::after {
     width: 100%;
 }
 
-.cursus .box .semester {
+.box .semester {
     display: flex;
     flex-wrap: wrap;
     gap:2.5rem;
 }
 
-.cursus .box .semester-content{
+.box .semester-content{
     position: relative;
     flex: 1;
 }
 
-.cursus .box .year{
+.box .year{
     font-size: 1rem;
     color: var(--accentColor);
     padding-bottom: .35rem;
 }
 
-.cursus .box .year i {
+.box .year i {
     padding-right: .35rem
 }
 
-.cursus .box h3{
+.box h3{
     font-size: 1.5rem;
     color: var(--textColor);
     padding: 0;
     margin: 0;
 }
 
-.cursus .box ul,.cursus .box p{
+.box ul,.box p{
     font-size: 0.9rem;
     padding-top: .3rem;
     margin:0
 }
 
 .intro p {
-    max-width: 60%;
+    max-width: 90%;
+}
+
+.talents {
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+.talents ul {
+    font-size: 01.0rem;
+}
+
+.talents .box:nth-child(2) li {
+
+    margin: 3% 0 3% 0;
+}
+
+.chaque-projet{
+    padding: 1rem;
+    border: 0.15rem solid var(--accentColor);
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.langage{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.langage h3, .detail-projet {
+    flex: 3;
+}
+
+.langage h3{
+    text-align: center;
+    flex: 2;
 }
 
 @keyframes showRight {
@@ -390,7 +429,7 @@ ul {
     }
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .presentation, .snapshot {
         max-width: 100%; 
         width: 100%; 
@@ -405,7 +444,6 @@ ul {
         font-size: 2.5vw;
     }
     .header {
-        /* align-items: center;  */
         height: 15vw;
     }
     .navbar a {
@@ -424,4 +462,4 @@ ul {
         padding-top: 25vw; 
         margin-bottom: 5vw;
     }
-}
+} */
