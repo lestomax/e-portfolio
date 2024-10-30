@@ -16,6 +16,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--fond);
     color: var(--textColor);
@@ -68,7 +72,7 @@ h4 {
     color: var(--accentColor);
     font-size: 1.7rem;
     position: relative;
-    margin: 1.5rem 0 0.5rem 2rem;
+    margin: 0.9rem 0 0.5rem 2rem;
 }
 
 p, ul {
@@ -368,7 +372,7 @@ ul {
     padding-right: .35rem
 }
 
-.box h3{
+.box h3,.box h4{
     font-size: 1.5rem;
     color: var(--textColor);
     padding: 0;
@@ -400,27 +404,122 @@ ul {
     margin: 3% 0 3% 0;
 }
 
+.projets .box:hover::after{
+    width:0%;
+}
+
 .chaque-projet{
     padding: 1rem;
-    border: 0.15rem solid var(--accentColor);
+    border: 0.15rem solid var(--buttonColor);
     border-radius: .5rem;
-    margin-bottom: 1.5rem;
     position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: var(--buttonColor);
+    margin-bottom: 1rem;
+}
+
+.chaque-projet h4 {
+    color: var(--buttonColor);
+}
+
+.chaque-projet:nth-last-child(1){
+    margin-bottom:0;
+}
+
+.chaque-projet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--buttonColor);
+    z-index: -1;
+    transition: .5s;
+}
+
+.chaque-projet:hover::before {
+    width: 100%;
+}
+
+.chaque-projet:hover, .chaque-projet:hover h4 {
+    color: var(--fond)
 }
 
 .langage{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
+    max-width: 60rem;
 }
 
-.langage h3, .detail-projet {
+.detail-projet {
     flex: 3;
 }
 
-.langage h3{
+.langage .boite-langage{
+    display: flex;
     text-align: center;
-    flex: 2;
+    flex:2;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.boite-langage::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--lighterAccentColor);
+    transition: .5s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.projets .box:hover .boite-langage::before{
+    opacity: 1;
+}
+
+.barre {
+    scroll-margin-top: 6rem;
+    display: flex;
+    border: var(--buttonColor) solid 0.2rem;
+    border-radius: 10000rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.barre a {
+    text-decoration: none;
+    color: var(--buttonColor);
+    font-size: 1rem;
+    margin: 0.4rem;
+    padding: 0 0.6rem;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.barre .active, .barre a:hover {
+    text-decoration: none;
+    color: var(--fond);
+    font-size: 1.1rem;
+    margin: 0.4rem;
+    background-color: var(--buttonColor);
+    padding: 0 0.6rem;
+    border: var(--buttonColor) solid 0.2rem;
+    border-radius: 10000rem;
+    
+    font-weight: 500;
+    transition: .3s;
 }
 
 @keyframes showRight {
