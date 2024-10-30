@@ -23,6 +23,12 @@ html {
 body {
     background: var(--fond);
     color: var(--textColor);
+    display: flex;
+    justify-content: center;
+}
+
+.original-body{
+    justify-content: flex-start;
 }
 
 h1 {
@@ -295,7 +301,7 @@ ul {
     color: var(--fond);
 }
 
-.engineering {
+.home .classic {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,7 +517,7 @@ ul {
 .barre .active, .barre a:hover {
     text-decoration: none;
     color: var(--fond);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin: 0.4rem;
     background-color: var(--buttonColor);
     padding: 0 0.6rem;
@@ -520,6 +526,11 @@ ul {
     
     font-weight: 500;
     transition: .3s;
+}
+
+.languages .box div {
+    display: flex;
+    justify-content: space-between;
 }
 
 @keyframes showRight {
