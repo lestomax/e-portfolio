@@ -78,7 +78,7 @@ h4 {
     color: var(--accentColor);
     font-size: 1.7rem;
     position: relative;
-    margin: 0.9rem 0 0.5rem 2rem;
+    margin: 2rem 0 0.5rem 2rem;
 }
 
 p, ul {
@@ -392,7 +392,7 @@ ul {
 }
 
 .intro p {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .talents {
@@ -528,9 +528,55 @@ ul {
     transition: .3s;
 }
 
-.languages .box div {
+.languages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languages h4{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.languages .box div .level{
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
+}
+
+.bar{
+    padding: 0.15rem;
+    border: 0.15rem solid var(--buttonColor);
+    border-radius: 10000rem;
+    color: var(--buttonColor);
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    width: 25rem;
+    height: 1.3rem;
+    position: relative;
+}
+
+.ES .bar{
+    margin-bottom: 0.5rem;
+}
+
+.bar span{
+    display: block;
+    width: 100%;
+    background-color: var(--buttonColor);
+    height: 100%;
+    border: 0.15rem solid var(--buttonColor);
+    border-radius: 10000rem;
+    color: var(--buttonColor);
+}
+
+.EN span {
+    width: 85%;
+}
+
+.ES span {
+    width: 45%;
 }
 
 @keyframes showRight {
