@@ -514,19 +514,24 @@ ul {
     transition: .3s;
 }
 
+
+/* .barre a:not(.active){
+    animation: grossi 0.8s ease forwards;
+} */
+
 .barre .active, .barre a:hover {
     text-decoration: none;
     color: var(--fond);
     font-size: 1.05rem;
-    margin: 0.4rem;
     background-color: var(--buttonColor);
-    padding: 0 0.6rem;
     border: var(--buttonColor) solid 0.2rem;
     border-radius: 10000rem;
-    
+    margin: 0.4rem;
+    padding: 0 0.6rem;
     font-weight: 500;
     transition: .3s;
 }
+
 
 .languages{
     display: flex;
@@ -579,9 +584,98 @@ ul {
     width: 45%;
 }
 
+.subpart {
+    max-width: 50rem;
+}
+
+.box div:hover .bar span{
+    animation: chargement 1.3s ease forwards;
+}
+
+.box .EN:hover .bar span{
+    animation: chargement1 1.3s ease forwards;
+}
+
+.box .ES:hover .bar span{
+    animation: chargement2 1.3s ease forwards;
+}
+
+/* .box div .bar span{
+    animation: chargement 1.3s ease forwards;
+}
+
+.box .EN .bar span{
+    animation: chargement1 1.3s ease forwards;
+}
+
+.box .ES .bar span{
+    animation: chargement2 1.3s ease forwards;
+} */
+
+.languages .box::after {
+    width: 100%;
+    opacity: 0;
+}
+
+/* .languages .box:hover::after {
+    opacity: 1;
+} */
+
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+
+@keyframes chargement {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes chargement1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes chargement2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes chargement2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes grossi {
+    0%{
+        color: var(--fond);
+        font-size: 1.05rem;
+        background-color: var(--buttonColor);
+        border: var(--buttonColor) solid 0.2rem;
+        border-radius: 10000rem;
+    }
+    100%{
+    color: var(--buttonColor);
+    font-size: 1.0rem;
+    background-color: var(--fond);
+    border: 0rem;
     }
 }
 
